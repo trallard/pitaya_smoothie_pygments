@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pitaya-smoothie"
-version = "0.1.0"
+version = "0.1.3"
 description = "\"A professional syntax highlighting theme inspired by the Ultraviolet Pantone colour of the year and outrun aesthetics.\""
 authors = ["Tania Allard <trallard@bitsandchips.me>"]
 readme = "README.md"
@@ -43,6 +43,11 @@ exclude = '''
 
 [tool.setuptools_scm]
 write_to = "pitaya_smoothie/version.py"
+
+
+[tool.poetry.plugins."pygments.styles"]
+pitaya_smoothie = "pitaya_smoothie:main"
+
 
 [build-system]
 requires = ["poetry>=0.12", "setuptools>=42", "wheel", "setuptools_scm[toml]>=3.4"]
