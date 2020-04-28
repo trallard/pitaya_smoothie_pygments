@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "pitaya-smoothie"
+version = "0.1.0"
+description = "\"A professional syntax highlighting theme inspired by the Ultraviolet Pantone colour of the year and outrun aesthetics.\""
+authors = ["Tania Allard <trallard@bitsandchips.me>"]
+readme = "README.md"
+license = "BSD-3-Clause"
+homepage = "https://trallard.github.io/pitaya_smoothie/"
+repository = "https://github.com/trallard/pitaya_smoothie_pygments"
+keywords = ["pygments", "colors", "syntax"]
+classifiers=[
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+]
+include=["LICENSE"]
+packages=[{include="pitaya_smoothie/"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+twine = "^3.1.1"
+
+[tool.poetry.dev-dependencies]
+black = "^19.10b0"
+flake8 = "^3.7.9"
+
+[tool.black]
+line-length = 79
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.setuptools_scm]
+write_to = "pitaya_smoothie/version.py"
+
+[build-system]
+requires = ["poetry>=0.12", "setuptools>=42", "wheel", "setuptools_scm[toml]>=3.4"]
+build-backend = "poetry.masonry.api"
+
