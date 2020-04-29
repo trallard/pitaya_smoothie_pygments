@@ -46,7 +46,7 @@ write_to = "pitaya_smoothie/version.py"
 
 
 [tool.poetry.plugins."pygments.styles"]
-pitaya_smoothie = "pitaya_smoothie:main"
+pitaya_smoothie = "pitaya_smoothie:PitayaSmoothie"
 
 
 [build-system]
